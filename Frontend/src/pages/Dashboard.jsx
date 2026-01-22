@@ -14,7 +14,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch('http://localhost:3000/api/data')
+        const res = await fetch('https://assesment-backend-codg.onrender.com/api/data')
         if (!res.ok) throw new Error(`HTTP ${res.status}`)
         const json = await res.json()
         if (!json.msg || !json.msg.length) {
